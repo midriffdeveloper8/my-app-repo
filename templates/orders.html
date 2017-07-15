@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/picnic/6.1.1/picnic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/picnic/6.1.1/plugins.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+      <a href="#" class="brand">
+        <span>Shopify App</span>
+      </a>
+    </nav>
+
+    <main>
+        <h1>Orders</h1>
+        <div class="flex one">
+          {% if orders %}
+		  {% for order in orders %}
+          <div>
+            <article class="card">
+              <section>
+			  <table>
+                <tr><td>billing_address :</td>
+				<td>{{ order.address1 }}</td>
+				</tr>
+            <tr><td>discounts:<td>{{ order.total_discounts }} </tr>
+			<tr><td>order_number:<td>{{ order.number }} </tr>
+			<tr><td>email:<td>{{ order.email }} </tr>
+			<tr><td>discount codes:</td>{% for discount in discounts %}<td>{{ discount.code }}</td>{% endfor %}
+			<tr><td>discount amount:</td><td>{{ discounts_amount  }}</td>
+			<tr><td>discount savings</td><td>{{ discounts.savings }}</td>
+			<tr><td>discount type: </td><td>{{ discounts.type}}</td>
+		
+			</table>
+              </section>
+            </article>
+          </div>
+		  {% endfor %}
+          {% else %}
+			NO orders
+			{% endif %}
+        </div>
+    </main>
+
+</body>
+</html>
