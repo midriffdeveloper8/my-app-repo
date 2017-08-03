@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "# shopify-app" 
 "# shopify-app" 
 "# shopify-app" 
@@ -15,3 +16,7 @@ shopify app practice
 # second
 second attempt
 >>>>>>> 62ddae670a9d0c6aa7307e60afbd0b997bb16522
+=======
+# create-app-repo
+create-app-repo
+>>>>>>> 12a5ba648abf02463ff4b6fecae520cf2736f127
